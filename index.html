@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Activity Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Activity Tracker</h1>
+        </header>
+        
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" onclick="showSection('dashboard')">Dashboard</a></li>
+                <li><a href="#" onclick="showSection('studentList')">Students</a></li>
+                <li><a href="#" onclick="showSection('reports')">Reports</a></li>
+                <li><a href="#" onclick="showSection('settings')">Settings</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="dashboard" class="content-section">
+                <h2>Dashboard</h2>
+                <div class="widget">
+                    <h3>Active Students</h3>
+                    <p id="activeStudents">Loading...</p>
+                </div>
+                <div class="widget">
+                    <h3>Recent Activities</h3>
+                    <ul id="recentActivities">Loading...</ul>
+                </div>
+            </section>
+            
+            <section id="studentList" class="content-section hidden">
+                <h2>Student List</h2>
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Last Activity</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be populated by JS -->
+                    </tbody>
+                </table>
+            </section>
+            
+            <section id="reports" class="content-section hidden">
+                <h2>Reports</h2>
+                <p>Generate and view detailed reports of student activities.</p>
+                <!-- Additional reporting functionalities can be added here -->
+            </section>
+            
+            <section id="settings" class="content-section hidden">
+                <h2>Settings</h2>
+                <p>Adjust application settings and user preferences.</p>
+                <!-- Additional settings controls can be added here -->
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
